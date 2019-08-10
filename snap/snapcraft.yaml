@@ -1,0 +1,34 @@
+name: netsurf 
+base: core18
+version: '3.9'
+summary: netsurf
+description: |
+  NetSurf is a free, open source web browser
+
+grade: stable
+
+parts:
+  netsurf-compile:
+    # See 'snapcraft plugins'
+    plugin: make 
+    source: /home/vagrant/netsurf/netsurf-all-3.9
+    build-packages: 
+     - build-essential 
+     - libbison-dev 
+     - flex 
+     - pkg-config 
+     - libexpat1-dev 
+     - gperf 
+     - libcurl4-openssl-dev 
+     - libssl-dev 
+     - libpng-dev 
+     - libgtk2.0-dev 
+     - libwww-perl 
+     - libjpeg9-dev
+    stage-packages:
+     - flex
+     - gperf
+     - libwww-perl
+apps:
+    get:
+        command: bin/netsurf
