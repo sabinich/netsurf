@@ -24,11 +24,10 @@ parts:
      - libpng-dev 
      - libgtk2.0-dev 
      - libwww-perl 
-     - libjpeg9-dev
+     - libjpeg8-dev
+     - libjpeg8
     stage-packages:
      - flex
      - gperf
      - libwww-perl
-apps:
-    get:
-        command: bin/netsurf
+     - libjpeg8
